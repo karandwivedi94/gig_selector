@@ -1,0 +1,20 @@
+<h1> <%= @gig.name %></h1>
+
+<%= image_tag @gig.image %>
+
+<ul>
+<li>Name: <%= @gig.name %></li>
+<% if @gig.artist.present? %>
+    <li>Artist: <%= link_to @gig.artist.name, @gig.artist %></li>
+<% end%>
+<li>Location: <%= @gig.location %></li>
+<li>Genre: <%= @gig.genre %></li>
+<li>Rating: <%= @gig.rating %></li>
+
+
+</ul>
+
+<div class="controls">
+    <%= link_to 'Edit gig', edit_gig_path(@gig) %>
+    <%= link_to 'Delete gig', @gig, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+</div>
