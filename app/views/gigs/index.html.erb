@@ -1,23 +1,25 @@
 <h1>All Events</h1>
 
+
+
 <% @gigs.each do |gig|%>
-    <%= image_tag gig.image, :class => 'thumb' if gig.image.present? %>
+    <%= image_tag gig.image, :class => 'gigs-index' if gig.image.present? %>
+    
     <ul>
         <li>Name: <%= link_to gig.name, gig %></li>
         <li>Location: <%= gig.location %></li>
         <li>Genre: <%= gig.genre %></li>
         <li>Rating: <%= gig.rating %></li>
-        <li>Promoter: <%= link_to image_tag(gig.user.image, :class => 'thumb'), gig.user %> </li>
-        <li>Lineup: <%= gig.artist_id %></li>
+        <li>Promoter: <%= link_to gig.user.name, gig.user %> </li>
+        <li>Lineup: <% gig.artists.each do |artist| %> 
+        <%= link_to artist.name, artist  %>
+        <% end%>
+        </li>
+
+    
     </ul>
 
-    <% gig.artists.each do |artist| %>
-    <%= link_to image_tag(artist.image, :class => 'thumb'), artist %>  
-  
 <% end%>
-<% end %> 
 
 
 
-
-<%#  <% #<%= link_to image_tag(artist.image, :class => 'thumb'), artist %> 

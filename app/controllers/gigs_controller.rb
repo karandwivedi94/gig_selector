@@ -3,7 +3,6 @@ class GigsController < ApplicationController
 
 def index 
   @gigs = Gig.all
-  @gig = Gig.all
 end
 
   def new
@@ -31,9 +30,11 @@ end
     redirect_to gigs_path
   end
 
+
+
   private
   def gig_params
-    params.require(:gig).permit(:name, :location, :image, :user_id, :genre, :rating, :artist_id)
+    params.require(:gig).permit(:name, :location, :image, :user_id, :genre, :rating, :artist_id, :artist)
   end
 end
 
