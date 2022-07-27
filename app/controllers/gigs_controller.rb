@@ -1,6 +1,5 @@
 class GigsController < ApplicationController
-  before_action :check_for_admin, only: [:edit, :destroy]
-
+  #before_action :check_for_admin, only: [:edit, :destroy]
 def index 
   @gigs = Gig.all
 end
@@ -16,8 +15,8 @@ end
   end
 
   def edit
-    @current_user = User.find_by :id => session[:user_id] 
     @gig = Gig.find params[:id]
+    check_for_owner(@gig)
   end
 
   def update

@@ -20,8 +20,7 @@
       <%= link_to 'All Promoters', users_path %>
       <% if @current_user.present? %>
        <div class ="usernav"> <%= link_to "Create Event", new_gig_path %> |
-        <%= link_to "All My Events", gigs_path %>|
-        <%= link_to "My Profile" %> |
+        <%= link_to "My Profile", user_path(@current_user.id) %> | 
         <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
        </div>
       <% else %>

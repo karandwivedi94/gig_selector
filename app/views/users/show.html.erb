@@ -10,12 +10,16 @@
 <li>Instagram: <%= @user.ig_link %></li>
 <li>Other Link: <%= @user.other_link %></li>
 <li>Other Link: <%= @user.other_link %></li>
-<li>Rating: <%= @user.rating %></li>
-
+<li>All my events: <% @user.gigs.each do |gig| %> 
+<%= link_to gig.name, gig %>
+<% end %> 
+</li>
 
 </ul>
 
 <div class="controls">
-    <%= link_to 'Edit User', edit_user_path(@user) %>
+<% if @current_user.present? && (@current_user.email == @user.email || @current_user.admin?)  %>
+    <%= link_to 'Edit User', edit_gig_path(@user) %>
     <%= link_to 'Delete User', @user, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
 </div>
+<% end%>

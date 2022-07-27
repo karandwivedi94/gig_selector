@@ -1,4 +1,4 @@
-<div class = "container">
+
 
 <h1>All Promoters</h1>
 
@@ -11,19 +11,16 @@
         IG: <%= user.ig_link %>
         <% user.gigs.each do |gig| %> 
         <%= link_to gig.name, gig %>
-        <% end %> 
+        
     </div>
-
+<% end %> 
 
 <div class="controls">
-    
-    <%= link_to 'Edit User', edit_user_path(user) if user.admin?  %>
-    <%= link_to 'Delete User', @user, :method => 'delete', :data => { :confirm => 'Are you sure?'} if user.admin?  %>
+<% if @current_user.present? && (@current_user.email == user.email || @current_user.admin?)  %>
+    <%= link_to 'Edit User', edit_user_path(user) %>
+    <%= link_to 'Delete User', user, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
 </div>
 <% end%>
 
+<% end%>
 
-
-
-
-</div>
