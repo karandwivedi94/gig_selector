@@ -5,17 +5,20 @@
     <%= f.text_field :image %>
     <%= f.label :genre %>
     <%= f.text_field :genre %>
-    <%= f.label :artist_1 %>
-    <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %>
-    <%= f.label :artist_2 %>
-    <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %>
-    <%= f.label :artist_3 %>
-    <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %>
-    <%= f.label :artist_4 %>
-    <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %>
+    <!--- <%= f.label :artist_1 %>
+    # <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %>
+    # <%= f.label :artist_2 %>
+    # <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %>
+    # <%= f.label :artist_3 %>
+    # <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %>
+    # <%= f.label :artist_4 %>
+    # <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %> 
+    -->
+    <%= f.collection_check_boxes :artist_ids, Artist.all, :id, :name %>
+
     <%= f.label :location %>
     <%= f.text_field :location %>
     <%= f.label :rating %>
     <%= f.text_field :rating %>
-    <%= f.submit "Create Event" %>
+    <%= f.submit %>
 <% end %>

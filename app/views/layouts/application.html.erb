@@ -12,13 +12,21 @@
 
     <nav>
       <%= link_to 'Home', root_path %>
+      |
+      <%= link_to 'All Events', gigs_path %>
+      |
+      <%= link_to 'All Artists', artists_path %>
+      |
+      <%= link_to 'All Promoters', users_path %>
       <% if @current_user.present? %>
-        <%= link_to "Create Event", new_gig_path %>
-        <%= link_to 'All Events', gigs_path %>
+       <div class ="usernav"> <%= link_to "Create Event", new_gig_path %> |
+        <%= link_to "All My Events", gigs_path %>|
+        <%= link_to "My Profile" %> |
         <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
+       </div>
       <% else %>
-        <%= link_to 'Sign up', new_user_path %>
-        <%= link_to 'Sign in', login_path %>
+       <div class = "rightnav"><%= link_to 'Promoter Sign up', new_user_path %>
+        <%= link_to 'Sign in', login_path %></div> 
       <% end %>
     </nav>
 

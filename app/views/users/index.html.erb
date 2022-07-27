@@ -1,7 +1,29 @@
-<h1>All users</h1>
+<div class = "container">
 
-<h2><%= @users.count %> users</h2>
+<h1>All Promoters</h1>
 
-<% @users.each do |user| %>
-    <p><%= user.email %></p>
-<% end %>
+<% @users.each do |user|%>
+    <%= image_tag user.image, :class => 'userthumb' if user.image.present? %>
+    <div class="usercontainerindex">
+        Name: <%= user.name %>
+        website: <%= user.website %>
+        FB: <%= user.fb_link %>
+        IG: <%= user.ig_link %>
+        <% user.gigs.each do |gig| %> 
+        <%= link_to gig.name, gig %>
+        <% end %> 
+    </div>
+
+
+<div class="controls">
+    
+    <%= link_to 'Edit User', edit_user_path(user) if user.admin?  %>
+    <%= link_to 'Delete User', @user, :method => 'delete', :data => { :confirm => 'Are you sure?'} if user.admin?  %>
+</div>
+<% end%>
+
+
+
+
+
+</div>

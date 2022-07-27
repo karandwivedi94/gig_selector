@@ -1,5 +1,5 @@
 class GigsController < ApplicationController
-  before_action :check_for_login
+  before_action :check_for_admin, only: [:edit, :destroy]
 
 def index 
   @gigs = Gig.all
@@ -16,25 +16,32 @@ end
   end
 
   def edit
-    @gig = Gig.find params [:id]
+    @current_user = User.find_by :id => session[:user_id] 
+    @gig = Gig.find params[:id]
   end
 
   def update
-    gig = Gig.find params [:id]
+    gig = Gig.find params[:id]
     gig.update gig_params
     redirect_to gig
   end
 
   def show
-    @gig = Gig.find params [:id]
+    @gig = Gig.find params[:id]
+  end
+
+  def destroy
+    gig = Gig.find params[:id]
+    gig.destroy
     redirect_to gigs_path
   end
 
 
-
   private
   def gig_params
-    params.require(:gig).permit(:name, :location, :image, :user_id, :genre, :rating, :artist_id, :artist)
+    params.require(:gig).permit(:name, :location, :image, :user_id, :genre, :rating, :artist, :artist_ids => [])
   end
 end
+
+
 

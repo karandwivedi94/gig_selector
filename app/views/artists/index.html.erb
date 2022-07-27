@@ -1,15 +1,17 @@
+<div class = "container">
+
 <h1>All Artists</h1>
 
 
 <% @artists.each do |artist|%>
-    <%= artist_tag artist.image, :class => 'thumb' if artist.image.present? %>
-    <ul>
-        <li>Name: <%= link_to artist.name, artist_new_path %></li>
-        <li>Social: <%= artist.social %></li>
-        <li>Work: <%= artist.work %></li>
-        <li>Bio: <%= artist.bio %></li>
-    </ul>
+    <%= image_tag artist.image, :class => 'artistthumb' if artist.image.present? %>
+    <div class="artistcontainerindex">
+        Name: <%= link_to artist.name, artist  %>
+         Social: <%= artist.social %>
+         Work: <%= artist.work %>
+         Bio: <%= artist.bio %>``
+    </div>
 <% end%>
-<% end %> 
 
 
+</div>

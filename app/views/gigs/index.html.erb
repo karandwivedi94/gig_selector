@@ -1,25 +1,30 @@
-<h1>All Events</h1>
+<div class = "container">
 
+<h1>Upcoming Events in Sydney</h1>
 
 
 <% @gigs.each do |gig|%>
-    <%= image_tag gig.image, :class => 'gigs-index' if gig.image.present? %>
+    <ul class = "gigs-index">
     
-    <ul>
-        <li>Name: <%= link_to gig.name, gig %></li>
-        <li>Location: <%= gig.location %></li>
-        <li>Genre: <%= gig.genre %></li>
-        <li>Rating: <%= gig.rating %></li>
-        <li>Promoter: <%= link_to gig.user.name, gig.user %> </li>
-        <li>Lineup: <% gig.artists.each do |artist| %> 
-        <%= link_to artist.name, artist  %>
-        <% end%>
-        </li>
-
-    
-    </ul>
-
+        <h1 class = "gignameindex"> <%= link_to gig.name, gig %></h1>
+        <h2 class ="gigsdateindex">Saturday, 24th July @ <%= gig.location %> </h2>
+        <div class ="giginfoindex">
+        <div class="imagecontainer"><%= image_tag gig.image, :class => 'feature' %> <div class="imagetext"> 
+        <h4> <%= gig.genre %> </h4></div> </div> 
+        <div class ="giglineupindex">
+        <li class = "artistname"><% gig.artists.each do |artist| %> 
+        <%= link_to artist.name, artist %>
+        <% end %> 
+        </li> </div>
+        <button class="button-32" role="button">Tix!</button>
+        </div>
+    </ul>  
 <% end%>
+
+</div>
+
+
+
 
 
 
