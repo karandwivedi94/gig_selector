@@ -11,7 +11,7 @@ end
   def create
     gig = Gig.create gig_params
     @current_user.gigs << gig # Give the new gig to the current user
-    redirect_to gigs # Change this to redirect to gig or somewhere
+    redirect_to gig # Change this to redirect to gig or somewhere
   end
 
   def edit
