@@ -7,8 +7,8 @@
 <div class ="bordershowartist">
     <h3> <%= link_to artist.name, artist %> </h3> 
     <h3><%= image_tag artist.image, :class => "left" if artist.image.present?  %>
-    <div class="righttext">  <a href=<%= artist.work %>><img class = "sociallogo" src="/assets/linktree.png" alt="linktreelogo"></a> |  
-    <a href=<%= artist.social %>> <img class = "sociallogo" src="/assets/output-onlinepngtools.png" alt="instagramlogo"></a> 
+    <div class="righttext">  <a href=<%= artist.work %>><%= image_tag("linktree.png", :class => "sociallogo", :alt => "linktreelogo" )%></a> |  
+    <a href=<%= artist.social %>> <%= image_tag("insta_logo.png", :class => "sociallogo", :alt => "linktreelogo" )%></a> 
  </div> </h3> 
     </div>
 <% end%>

@@ -10,12 +10,14 @@
         <h2 class ="gigsdateindex"> <%= gig.eventdate.strftime '%A, %e %b' unless gig.eventdate.nil? %> @ <%= gig.location %> </h2>
         <div class ="giginfoindex">
         <div class="imagecontainer"><%= image_tag gig.image, :class => 'feature' %> <div class="imagetext"> 
-        <h4> <%= gig.genre %> </h4></div> </div> 
-        <div class ="giglineupindex"> Lineup:
-        <li class = "artistname"><% gig.artists.each do |artist| %> 
+        </div> </div> 
+        <div class ="giglineupindex"> 
+        <h4 class = "artistname"> Lineup: <% gig.artists.each do |artist| %> 
         <%= link_to artist.name, artist %>
         <% end %> 
-        </li> </div>
+        </li> 
+        <h1 class="gigindexgenre"> Genre: <%= gig.genre %> </h1 class="gigindexgenre">
+        </div>
         <button class="button-32" role="button"> <%= link_to 'Tickets!', gig.tickets_link, :class => 'ticketbuttonlink' %> </button>
         </div>
     </ul>  
