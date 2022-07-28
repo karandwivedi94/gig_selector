@@ -1,21 +1,19 @@
 <div class = "gigshowcontainer">
-<h1> <%= @gig.name %></h1> 
+<h1 class = "gigshowh1"> <%= @gig.name %></h1> 
 
-<%= image_tag @gig.image %>
+<%= image_tag @gig.image, :class => 'gigshowimage' %>
 
 <ul class = "gigsshowgrid">
-<li><% @gig.artists.each do |artist| %> 
+<li>Lineup:<% @gig.artists.each do |artist| %> 
         <%= link_to artist.name, artist  %>
-        <%= image_tag artist.image, :class => 'artistimage'  %>
         <% end%> 
 <li>Location: <%= @gig.location %></li>
-<li>Promoter: <%= link_to @gig.user.name, @gig.user %> <%= image_tag @gig.user.image, :class => "promoterlogoshow" %>  </li>
-<li>Genre: <%= @gig.genre %></li>
+<li>Promoter: <%= link_to @gig.user.name, @gig.user %>  </li>
 </ul>
 
 
 <div class="controls">
-<% if @current_user.present? && (@current_user.email == @gig.user.email || @current_user.admin?)  %>
+<% if @current_user == @gig.user || @current_user.admin?  %>
     <%= link_to 'Edit gig', edit_gig_path(@gig) %>
     <%= link_to 'Delete gig', @gig, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
 </div>

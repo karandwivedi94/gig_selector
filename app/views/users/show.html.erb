@@ -1,25 +1,29 @@
-<h1> <%= @user.name %></h1>
+<div class="artistshowcontainer">
+<h1 class="artistshowname"> <%= @user.name %></h1>
 
-<%= image_tag @user.image %>
+<div class = "bordershowartist"><h3><%= image_tag @user.image, :class => "left" if @user.image.present?  %>
 
-<ul>
-<li>Name: <%= @user.name %></li>
-<li>Website: <%= @user.website %></li>
-<li>Email: <%= @user.email %></li>
-<li>Facebook: <%= @user.fb_link %></li>
-<li>Instagram: <%= @user.ig_link %></li>
-<li>Other Link: <%= @user.other_link %></li>
-<li>Other Link: <%= @user.other_link %></li>
-<li>All my events: <% @user.gigs.each do |gig| %> 
+<div class="righttext">
+
+
+<a href=<%= @user.email %>><img class="sociallogo" src="/assets/emaillogo.png" alt=""></a> |
+<a href=<%= @user.fb_link %>><img class="sociallogo" src="/assets/fblogo.png" alt=""></a> |
+<a href=<%= @user.ig_link %>><img class="sociallogo" src="/assets/output-onlinepngtools.png" alt=""></a> 
+<br>
+
+All events: <% @user.gigs.each do |gig| %> 
 <%= link_to gig.name, gig %>
 <% end %> 
-</li>
 
-</ul>
+</div>
+</h3> </div>
 
 <div class="controls">
 <% if @current_user.present? && (@current_user.email == @user.email || @current_user.admin?)  %>
-    <%= link_to 'Edit User', edit_gig_path(@user) %>
+    <%= link_to 'Edit User', edit_user_path(@user) %>
     <%= link_to 'Delete User', @user, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
 </div>
 <% end%>
+
+</div>
+

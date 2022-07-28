@@ -1,22 +1,22 @@
 <div class = "container">
 
-<h1>Upcoming Events in Sydney</h1>
+<h1 class = "indexheader">Upcoming Events in Sydney</h1>
 
 
 <% @gigs.each do |gig|%>
     <ul class = "gigs-index">
     
         <h1 class = "gignameindex"> <%= link_to gig.name, gig %></h1>
-        <h2 class ="gigsdateindex">Saturday, 24th July @ <%= gig.location %> </h2>
+        <h2 class ="gigsdateindex"> <%= gig.eventdate.strftime '%A, %e %b' unless gig.eventdate.nil? %> @ <%= gig.location %> </h2>
         <div class ="giginfoindex">
         <div class="imagecontainer"><%= image_tag gig.image, :class => 'feature' %> <div class="imagetext"> 
         <h4> <%= gig.genre %> </h4></div> </div> 
-        <div class ="giglineupindex">
+        <div class ="giglineupindex"> Lineup:
         <li class = "artistname"><% gig.artists.each do |artist| %> 
         <%= link_to artist.name, artist %>
         <% end %> 
         </li> </div>
-        <button class="button-32" role="button">Tickets!</button>
+        <button class="button-32" role="button"> <%= link_to 'Tickets!', gig.tickets_link, :class => 'ticketbuttonlink' %> </button>
         </div>
     </ul>  
 <% end%>

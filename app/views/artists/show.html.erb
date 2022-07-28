@@ -1,13 +1,14 @@
-<h1> <%= @artist.name %></h1>
-
-<%= image_tag @artist.image %>
-
-<ul>
-<li>Name: <%= @artist.name %></li>
-<li>Social: <%= @artist.social %></li>
-<li>Work: <%= @artist.work %></li>
-<li>Bio: <%= @artist.bio %></li>
+<div class="artistshowcontainer">
+<h1 class="artistshowname"> <%= @artist.name %></h1>
 
 
-</ul>
+    
+<div class = "bordershowartist"><h3><%= image_tag @artist.image, :class => "left" if @artist.image.present?  %>
+   
+  <div class="righttext">  <a href=<%= @artist.work %>><img class = "sociallogo" src="/assets/linktree.png" alt="linktreelogo"></a> |  
+    <a href=<%= @artist.social %>> <img class = "sociallogo" src="/assets/output-onlinepngtools.png" alt="instagramlogo"></a> </h3> </div>
+   <h3> <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/646818657&color=%23846c54&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/dameeeela" title="dameeeela" target="_blank" style="color: #cccccc; text-decoration: none;">dameeeela</a> · <a href="https://soundcloud.com/dameeeela/sets/live-mixes-by-dameeeela" title="LIVE MIXES BY DAMEEEELA" target="_blank" style="color: #cccccc; text-decoration: none;">LIVE MIXES BY DAMEEEELA</a></div></h3> </div>
+    
 
+
+</div>

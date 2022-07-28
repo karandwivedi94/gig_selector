@@ -17,7 +17,13 @@
       |
       <%= link_to 'All Artists', artists_path %>
       |
+
+
       <%= link_to 'All Promoters', users_path %>
+
+  
+
+
       <% if @current_user.present? %>
        <div class ="usernav"> <%= link_to "Create Event", new_gig_path %> |
         <%= link_to "My Profile", user_path(@current_user.id) %> | 
@@ -32,3 +38,5 @@
     <%= yield %>
   </body>
 </html>
+
+

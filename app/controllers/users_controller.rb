@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :check_for_admin, only: [:edit, :destroy]
+  #before_action :check_for_admin, only: [:edit, :destroy]
 
   def index
     @users = User.all
@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find params[:id]
+    check_for_owner(@user)
   end
 
   def update
@@ -42,6 +43,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation, :name, :image)
   end
 end

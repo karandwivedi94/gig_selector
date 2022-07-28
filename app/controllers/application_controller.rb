@@ -14,8 +14,16 @@ class ApplicationController < ActionController::Base
         redirect_to login_path unless (@current_user.present? && @current_user.admin?)
     end
 
-    def check_for_owner (gig)
-        redirect_to root_path if ( @current_user.nil? || (@current_user != gig.user && !@current_user.admin?) )
+    # def check_for_owner (gig)
+    #     redirect_to root_path if ( @current_user.nil? || (@current_user != gig.user && !@current_user.admin?) )
+    # end
+
+    # def check_for_owner (user)
+    #     redirect_to root_path if ( @current_user.nil? || (@current_user != user && !@current_user.admin?) )
+    # end
+
+    def all_users
+        @user = User.all
     end
 
 end

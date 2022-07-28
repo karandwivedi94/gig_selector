@@ -16,6 +16,7 @@ end
 
   def edit
     @artist = Artist.find params[:id]
+    check_for_owner(@artist)
   end
 
   def update

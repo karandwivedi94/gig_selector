@@ -1,17 +1,17 @@
+<div class = "artistshowcontainer">
 
-
-<h1>All Promoters</h1>
+<h1 class="artistshowname">All Promoters</h1>
 
 <% @users.each do |user|%>
-    <%= image_tag user.image, :class => 'userthumb' if user.image.present? %>
-    <div class="usercontainerindex">
-        Name: <%= user.name %>
-        website: <%= user.website %>
+    
+    <div class="bordershowartist">
+       <h3> Name: <%= user.name %></h3> 
+       <h3><%= image_tag user.image, :class => 'left' if user.image.present? %>
+       <div class="righttext">  website: <%= user.website %>
         FB: <%= user.fb_link %>
         IG: <%= user.ig_link %>
         <% user.gigs.each do |gig| %> 
-        <%= link_to gig.name, gig %>
-        
+        <%= link_to gig.name, gig %> </div> </h3> 
     </div>
 <% end %> 
 
@@ -23,4 +23,6 @@
 <% end%>
 
 <% end%>
+
+</div>
 

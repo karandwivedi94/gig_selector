@@ -27,7 +27,7 @@ body{
 }
 
 a {
-    color: hotpink;
+    color: rgb(255, 255, 255);
   }
 
 .container{
@@ -36,7 +36,7 @@ a {
 }
 
 .feature {
-    height: 90%;
+    height: 140%;
 }
 
 .gignameindex {
@@ -46,7 +46,7 @@ a {
 
 .giginfoindex{
     display: grid;
-    grid-template-columns: 1fr 3fr 2fr 1fr;
+    grid-template-columns: 3fr 3fr 2fr;
 }
 
 .gigsdateindex{
@@ -97,8 +97,22 @@ a {
   }
 
   .gigsshowgrid{
+    align-self: center;
     display: grid;
-    grid-template-columns: 1fr 3fr 2fr 1fr;
+    grid-template-columns: 4fr 4fr 4fr;
+    text-align: center;
+    border: solid 1px white;
+    width: 100%;
+  }
+
+.gigshowh1{
+  text-align: center;
+  border: solid 1px white;
+  width: 105%;
+}
+
+  .gigshowimage{
+    width: 105%;
   }
 
 .ticketlogo{
@@ -113,7 +127,7 @@ a {
   .button-32 {
     background-color: #fff000;
     border-radius: 12px;
-    color: #000;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     font-weight: bold;
     padding: 10px 15px;
@@ -161,4 +175,87 @@ a {
 
 .usernav{
   float:right
+}
+
+
+.left {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  text-align: center;
+}
+
+.artistshowcontainer{
+  background-color: rgb(0, 0, 0);
+    margin: 0 auto;
+    width: 65%;
+    align-items: center;
+    display: grid;
+    padding: 20px
+}
+
+.sociallogo{
+  width: 30px;
+}
+
+.artistshowname{
+  text-align: center;
+}
+
+.rightext{
+  display: inline-block;
+}
+
+h3{
+text-align: center;
+}
+
+.bordershowartist{
+  border: 10px;
+  color: white;
+}
+
+
+.bordershowartist {
+  /* background-color:  rgba(184, 2, 208, 0.409); */
+  border: rgba(184, 2, 208, 0.409); ;
+  opacity: 0.8;
+  /* border: 3px solid rgb(219, 233, 239); */
+  height: 250px;
+  margin: 20px 0;
+  padding: 10px 30px 0 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(233, 3, 233, 0.4);
+}
+
+.bordershowartist:hover {
+  color: rgb(255, 255, 255);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  background-color: rgb(58, 1, 55);
+}
+
+/* .artistshowcontainer:hover{
+  color: rgb(255, 255, 255);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  background-color: rgb(58, 1, 55);
+}  */
+
+.submitbutton{
+  color: rgb(124, 0, 112);
+  text-align: center;
+}
+
+.formh1{
+  text-align: center;
+}
+
+.ticketbuttonlink{
+  color: black
+
+}
+
+.indexheader{
+  font-size: 20px;
+  text-align: center;
+  border: solid white 1px;
 }

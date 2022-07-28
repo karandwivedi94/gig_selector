@@ -11,12 +11,12 @@ end
   def create
     gig = Gig.create gig_params
     @current_user.gigs << gig # Give the new gig to the current user
-    redirect_to root_path # Change this to redirect to gig or somewhere
+    redirect_to gigs # Change this to redirect to gig or somewhere
   end
 
   def edit
     @gig = Gig.find params[:id]
-    check_for_owner(@gig)
+    # check_for_owner(@gig)
   end
 
   def update
@@ -38,7 +38,7 @@ end
 
   private
   def gig_params
-    params.require(:gig).permit(:name, :location, :image, :user_id, :genre, :rating, :artist, :artist_ids => [])
+    params.require(:gig).permit(:name, :location, :image, :eventdate, :tickets_link, :user_id, :genre, :rating, :artist, :artist_ids => [])
   end
 end
 

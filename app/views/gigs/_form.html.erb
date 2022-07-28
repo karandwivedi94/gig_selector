@@ -1,24 +1,36 @@
+<div class ="container">
 <%= form_for @gig do |f| %>
+
+<div id="event-registration">
+<form id="event-registration-form" method="POST" action="">
+<!-- Form contents will go here -->
+<fieldset>
+<h3>Gig Information</h3>
     <%= f.label :name %>
     <%= f.text_field :name %>
+    <%= f.label :eventdate %>
+    <%= f.text_field :eventdate, :placeholder => 'YYYY-MM-DD'  %>
     <%= f.label :image %>
     <%= f.text_field :image %>
     <%= f.label :genre %>
     <%= f.text_field :genre %>
-    <!--- <%= f.label :artist_1 %>
-    # <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %>
-    # <%= f.label :artist_2 %>
-    # <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %>
-    # <%= f.label :artist_3 %>
-    # <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %>
-    # <%= f.label :artist_4 %>
-    # <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %> 
-    -->
-    <%= f.collection_check_boxes :artist_ids, Artist.all, :id, :name %>
-
     <%= f.label :location %>
     <%= f.text_field :location %>
-    <%= f.label :rating %>
-    <%= f.text_field :rating %>
-    <%= f.submit %>
+    <%= f.label :Tickets_Link %>
+    <%= f.text_field :tickets_link %>
+       
+</fieldset>
+<fieldset>
+<h3>Artist Lineup (More coming soon!)</h3>
+<div>
+<%= f.collection_check_boxes :artist_ids, Artist.all, :id, :name %>
+<br/>
+</div>
+</fieldset>
+<%= f.submit class: "submitbutton" %>
+</div>
+</head>
+
 <% end %>
+
+</div>
