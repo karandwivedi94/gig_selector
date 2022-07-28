@@ -6,9 +6,9 @@
 <div class="righttext">
 
 
-<a href=<%= @user.email %>><img class="sociallogo" src="/assets/emaillogo.png" alt=""></a> |
-<a href=<%= @user.fb_link %>><img class="sociallogo" src="/assets/fblogo.png" alt=""></a> |
-<a href=<%= @user.ig_link %>><img class="sociallogo" src="/assets/output-onlinepngtools.png" alt=""></a> 
+<a href=<%= @user.email %>><%= image_tag("emaillogo.png", :class => "sociallogo", :alt => "emaillogo" )%></a> |
+<a href=<%= @user.fb_link %>><%= image_tag("fblogo.png", :class => "sociallogo", :alt => "facebooklogo" )%></a> |
+<a href=<%= @user.ig_link %>><%= image_tag("insta_logo.png", :class => "sociallogo", :alt => "linktreelogo" )%></a> 
 <br>
 
 All events: <% @user.gigs.each do |gig| %> 
