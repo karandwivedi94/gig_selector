@@ -7,6 +7,7 @@
     <ul class = "gigs-index">
     
         <h1 class = "gignameindex"> <%= link_to gig.name, gig %></h1>
+        <h2 class ="gigsdateindex"> <%= gig.eventdate.strftime '%A, %e %b' unless gig.eventdate.nil? %> @ <%= gig.location %> </h2>
         <div class ="giginfoindex">
         <div class="imagecontainer"><%= image_tag gig.image, :class => 'feature' %> <div class="imagetext"> 
         </div> </div> 
@@ -23,5 +24,9 @@
 <% end%>
 
 </div>
+
+
+
+
 
 
