@@ -20,6 +20,68 @@
   box-shadow: 0 10px 25px rgba(233, 3, 233, 0.4);
 }
 
+.backgroundimage {
+  width: 150%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.homecontainer{
+  max-width: 960px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.btn-group button {
+  background-color: #000000; /* Green background */
+  border: 1px solid rgb(0, 0, 0); /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  opacity: 0.8;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 60%;
+}
+
+
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
 body{
     background-color: rgb(0, 0, 0);
     

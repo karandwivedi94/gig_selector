@@ -30,7 +30,7 @@
         <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
        </div>
       <% else %>
-       <div class = "rightnav"><%= link_to 'Promoter Sign up', new_user_path %>
+       <div class = "rightnav"><%= link_to 'Sign up', new_user_path %> |
         <%= link_to 'Sign in', login_path %></div> 
       <% end %>
     </nav>
