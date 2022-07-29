@@ -5,9 +5,9 @@
 <% @users.each do |user|%>
     
     <div class="bordershowartist">
-       <h3> Name: <%= user.name %></h3> 
-       <h3><%= image_tag user.image, :class => 'left' if user.image.present? %>
-       <div class="righttext">  website: <%= user.website %>
+        <h3> Name: <%= user.name %></h3> 
+        <h3><%= image_tag user.image, :class => 'left' if user.image.present? %>
+        <div class="righttext">  website: <%= user.website %>
         FB: <%= user.fb_link %>
         IG: <%= user.ig_link %>
         <% user.gigs.each do |gig| %> 
@@ -15,6 +15,7 @@
     </div>
 <% end %> 
 
+<%#Most impressive line of code was this IF statement LOL%>
 <div class="controls">
 <% if @current_user.present? && (@current_user.email == user.email || @current_user.admin?)  %>
     <%= link_to 'Edit User', edit_user_path(user) %>

@@ -4,3 +4,5 @@ class User < ApplicationRecord
     has_many :gigs
 end
 
+#User can create multiple gigs
+#Must have valid and unique email + secure password

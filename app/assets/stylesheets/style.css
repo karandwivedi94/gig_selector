@@ -1,8 +1,5 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Oswald:wght@200;600&display=swap');
-
-
 
 .gigs-index {
     background-color:  rgb(0, 0, 0);
@@ -60,15 +57,12 @@
   background-color: #3e8e41;
 }
 
-
 /* Top left text */
 .top-left {
   position: absolute;
   top: 8px;
   left: 60%;
 }
-
-
 
 /* Centered text */
 .centered {
@@ -77,10 +71,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-
-
-
 
 body{
     background-color: rgb(0, 0, 0);
@@ -197,7 +187,6 @@ a {
     text-align: center;
   }
  
-
   .button-32 {
     background-color: #fff000;
     border-radius: 12px;
@@ -251,7 +240,6 @@ a {
   float:right
 }
 
-
 .left {
   border-radius: 50%;
   width: 130px;
@@ -288,7 +276,6 @@ text-align: center;
   border: 10px;
   color: white;
 }
-
 
 .bordershowartist {
   /* background-color:  rgba(184, 2, 208, 0.409); */

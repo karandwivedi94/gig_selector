@@ -1,6 +1,5 @@
 <div class ="container">
 <%= form_for @gig do |f| %>
-
 <div id="event-registration">
 <form id="event-registration-form" method="POST" action="">
 <!-- Form contents will go here -->
@@ -9,7 +8,7 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
     <%= f.label :eventdate %>
-    <%= f.text_field :eventdate, :placeholder => 'YYYY-MM-DD'  %>
+    <%= f.text_field :eventdate, :placeholder => 'YYYY-MM-DD'  %> <%#Add strftime here!%>
     <%= f.label :image %>
     <%= f.text_field :image %>
     <%= f.label :genre %>
@@ -18,16 +17,15 @@
     <%= f.text_field :location %>
     <%= f.label :Tickets_Link %>
     <%= f.text_field :tickets_link %>
-       
 </fieldset>
 <fieldset>
-<h3>Artist Lineup (More coming soon!)</h3>
-<div>
-<%= f.collection_check_boxes :artist_ids, Artist.all, :id, :name %>
-<br/>
-</div>
+    <h3>Artist Lineup (More coming soon!)</h3>
+    <div>
+    <%= f.collection_check_boxes :artist_ids, Artist.all, :id, :name %> <%#Look into Checkbox styling%>
+    <br/>
+    </div>
 </fieldset>
-<%= f.submit class: "submitbutton" %>
+    <%= f.submit class: "submitbutton" %>
 </div>
 </head>
 

@@ -1,29 +1,25 @@
 <div class="artistshowcontainer">
-<h1 class="artistshowname"> <%= @user.name %></h1>
-
-<div class = "bordershowartist"><h3><%= image_tag @user.image, :class => "left" if @user.image.present?  %>
-
-<div class="righttext">
-
-
-<a href=<%= @user.email %>><%= image_tag("emaillogo.png", :class => "sociallogo", :alt => "emaillogo" )%></a> |
-<a href=<%= @user.fb_link %>><%= image_tag("fblogo.png", :class => "sociallogo", :alt => "facebooklogo" )%></a> |
-<a href=<%= @user.ig_link %>><%= image_tag("insta_logo.png", :class => "sociallogo", :alt => "linktreelogo" )%></a> 
-<br>
-
-All events: <% @user.gigs.each do |gig| %> 
-<%= link_to gig.name, gig %>
-<% end %> 
-
-</div>
-</h3> </div>
-
-<div class="controls">
-<% if @current_user.present? && (@current_user.email == @user.email || @current_user.admin?)  %>
-    <%= link_to 'Edit User', edit_user_path(@user) %>
-    <%= link_to 'Delete User', @user, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
-</div>
-<% end%>
-
+    <h1 class="artistshowname"> <%= @user.name %></h1>
+    <div class = "bordershowartist">
+        <h3><%= image_tag @user.image, :class => "left" if @user.image.present?  %>
+            <div class="righttext">
+                <a href=<%= @user.email %>><%= image_tag("emaillogo.png", :class => "sociallogo", :alt => "emaillogo" )%></a> |
+                <a href=<%= @user.fb_link %>><%= image_tag("fblogo.png", :class => "sociallogo", :alt => "facebooklogo" )%></a> |
+                <a href=<%= @user.ig_link %>><%= image_tag("insta_logo.png", :class => "sociallogo", :alt => "linktreelogo" )%></a> 
+                <br>
+                All events:
+                    <% @user.gigs.each do |gig| %> 
+                        <%= link_to gig.name, gig %>
+                    <% end %> 
+            </div> <%#.righttext  %>
+        </h3> 
+    </div> <%#.bordershowartist  %>
+<%#Again, most impressive line of code here..%>
+    <div class="controls">
+        <% if @current_user.present? && (@current_user.email == @user.email || @current_user.admin?)  %>
+        <%= link_to 'Edit User', edit_user_path(@user) %>
+        <%= link_to 'Delete User', @user, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+    </div>
+        <% end%>
 </div>
 

@@ -3,6 +3,7 @@
 
 <%= image_tag @gig.image, :class => 'gigshowimage' %>
 
+<%#Gig Info Box%>
 <ul class = "gigsshowgrid">
 <li>Lineup:<% @gig.artists.each do |artist| %> 
         <%= link_to artist.name, artist  %>
@@ -11,13 +12,12 @@
 <li>Promoter: <%= link_to @gig.user.name, @gig.user %>  </li>
 </ul>
 
-
+<%#Only available for Users and admin%>
 <div class="controls">
 <% if @current_user == @gig.user || @current_user.admin?  %>
     <%= link_to 'Edit gig', edit_gig_path(@gig) %>
     <%= link_to 'Delete gig', @gig, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
 </div>
 <% end%>
-
 
 </div>

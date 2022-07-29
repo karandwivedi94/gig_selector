@@ -1,24 +1,40 @@
-# README
+Gig Selector - Find Events/Gigs online
+-------------
+>"Keep Sydney Open"
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Languages + libraries used:
+- Ruby on Rails
+- HTML
+- CSS
+- 
 
-Things you may want to cover:
+## Gems Used
+- bcrypt
 
-* Ruby version
+## Features
+- Log in, create new profile
+- Create a new event. 
+- Users can add: 
+- Artists, Images, Event details, Location, Genre
+- Users can Edit and Delete Events
+- Users that do not log in can still view events and artists
 
-* System dependencies
+## Bugs
+- Heroku bugs - Casual users cannot view event page
+- All Promoters CSS broken
 
-* Configuration
+## Code Improvements
 
-* Database creation
 
-* Database initialization
+## Demo
+Home Screen![Image of moon and home screen](/images/Home_Screen.png   "Optional Title")
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Feature Improvements
+- Ability to add artists through Spotify API
+- Let artists create their own gigs
+- Add a Genre and Date model for easier search
 
-* Deployment instructions
 
-* ...
+## Credits
+

@@ -14,6 +14,9 @@ class ApplicationController < ActionController::Base
         redirect_to login_path unless (@current_user.present? && @current_user.admin?)
     end
 
+    # spent hours trying to work the below code out with Loden, ended up breaking it.. RIP. 
+    #However, managed to find another way to do it!
+
     # def check_for_owner (gig)
     #     redirect_to root_path if ( @current_user.nil? || (@current_user != gig.user && !@current_user.admin?) )
     # end
