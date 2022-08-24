@@ -27,7 +27,7 @@ Gig Selector - Find Events/Gigs online
 
 
 ## Demo
-Home Screen![Image of moon and home screen](/assets/images/Home_Screen.png   "Optional Title")
+Home Screen![Image of moon and home screen](/images/Home_screen.png   "Optional Title")
 
 
 ## Feature Improvements

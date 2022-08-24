@@ -1,29 +1,18 @@
-<div class = "container">
-
 <h1 class = "indexheader">Upcoming Events in Sydney</h1>
-
+<hr style = "opacity: 0.2; width: 45%"> 
 
 <% @gigs.each do |gig|%>
-    <ul class = "gigs-index">
-    
-        <h1 class = "gignameindex"> <%= link_to gig.name, gig %></h1>
-        <h2 class ="gigsdateindex"> <%= gig.eventdate.strftime '%A, %e %b' unless gig.eventdate.nil? %> @ <%= gig.location %> </h2>
-        <div class ="giginfoindex">
-        <div class="imagecontainer"><%= image_tag gig.image, :class => 'feature' %> <div class="imagetext"> 
-        </div> </div> 
+<div class = "indexcontainer">
+        
+        <%= link_to image_tag(gig.image, :class => 'feature'), gig %>
         <div class ="giglineupindex"> 
-        <h4 class = "artistname"> Lineup: <% gig.artists.each do |artist| %> 
-        <%= link_to artist.name, artist %>
-        <% end %> 
-        </li> 
-        <h1 class="gigindexgenre"> Genre: <%= gig.genre %> </h1 class="gigindexgenre">
-        </div>
-        <button class="button-32" role="button"> <%= link_to 'Tickets!', gig.tickets_link, :class => 'ticketbuttonlink' %> </button>
-        </div>
-    </ul>  
+        
+        <iframe width="40%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1269663991&color=%23846c54&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/robbielowe" title="robbielowe" target="_blank" style="color: #cccccc; text-decoration: none;"></a><a href="https://soundcloud.com/robbielowe/robbie-lowe-playing-live-at-no-place-like-house-may-2022-oxford-undergroundsydney" target="_blank"  style="color: #cccccc; text-decoration: none; margin: 0 auto;"></a></div>     
+        <hr style = "opacity: 0.2; width: 45%"> 
 <% end%>
+       </div> 
+       </div>  
 
-</div>
 
 
 

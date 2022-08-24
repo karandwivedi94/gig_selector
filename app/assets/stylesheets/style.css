@@ -1,21 +1,23 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Oswald:wght@200;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200&family=Nova+Square&display=swap');
 
 .gigs-index {
-    background-color:  rgb(0, 0, 0);
+    /* background-color:  rgb(0, 0, 0); */
+    /* border: 1px solid white; */
     opacity: 0.8;
     /* border: 3px solid rgb(219, 233, 239); */
     height: 250px;
-    margin: 20px 0;
+    margin: 10px 0 40px;
+    
     padding: 10px 30px 0 30px;
     border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(233, 3, 233, 0.4);
+    /* box-shadow: 0 5px 15px #fff000; */
 }
 
-.gigs-index:hover {
+/* .gigs-index:hover {
   color: rgba(255, 255, 255, 1);
-  box-shadow: 0 10px 25px rgba(233, 3, 233, 0.4);
-}
+  box-shadow: 0 10px 25px white;
+} */
 
 .backgroundimage {
   width: 150%;
@@ -25,7 +27,7 @@
 
 
 .homecontainer{
-  max-width: 960px;
+  max-width: 960px;;
   position: relative;
   text-align: center;
   color: white;
@@ -73,9 +75,10 @@
 }
 
 body{
-    background-color: rgb(0, 0, 0);
+    background-color: #13513e;
     
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Catamaran', sans-serif;
+
     color: white;
 
     
@@ -92,7 +95,9 @@ a {
 }
 
 .feature {
-    height: 140%;
+    max-width: 40%;
+    height: 40%;
+    margin-top: 22px;
 }
 
 .gignameindex {
@@ -103,7 +108,10 @@ a {
 
 .giginfoindex{
     display: grid;
-    grid-template-columns: 3fr 3fr 2fr;
+    grid-template-columns: 4fr 2fr;
+    /* height: 90% */
+    max-width: 80%;
+    height: auto;
 }
 
 .gigsdateindex{
@@ -125,13 +133,20 @@ a {
 
     font-size: 150%;
     display: block;
+    margin: 0;
 }
 
 .imagecontainer{
     position:relative;
-    height: 20%;
-    margin-right: 60%;
-    margin-right: 40px;
+    /* margin-right: 60%;
+    margin-right: 40px; */
+    margin: 0;
+    max-width: 60%;
+    height: auto;
+}
+
+.inlineindex{
+  display: inline
 }
 
 .imagetext {
@@ -149,12 +164,27 @@ a {
     width: 65%;
   }
 
-.giglineupindex{
+  .indexcontainer{
+    text-align: center;
+    /* border-bottom: 1px solid white;
+    border-top: 1px solid white; */
+    border-width: auto;
+    padding: 5px;
+  }
+
+/* .giglineupindex{
   position:relative;
-    margin-right: 60%;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  margin-left: 2%;
+  /* vertical-align: middle; */
+    /* margin-right: 60%;
     margin-right: 40px;
-    margin-bottom: 80%;
-}
+    margin-bottom: 80%; */
+    /* margin: 0 auto; */
+    /* max-width: 100%;
+} */ */
 
   .promoterlogoshow{
     width: 10%;
@@ -248,7 +278,7 @@ a {
 }
 
 .artistshowcontainer{
-  background-color: rgb(0, 0, 0);
+  background-color: #13513e;
     margin: 0 auto;
     width: 65%;
     align-items: center;
@@ -286,13 +316,13 @@ text-align: center;
   margin: 20px 0;
   padding: 10px 30px 0 30px;
   border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(233, 3, 233, 0.4);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
 }
 
 .bordershowartist:hover {
   color: rgb(255, 255, 255);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  background-color: rgb(58, 1, 55);
+  background-color: #0b2e23;
 }
 
 /* .artistshowcontainer:hover{
@@ -316,9 +346,9 @@ text-align: center;
 }
 
 .indexheader{
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
-  border: solid white 1px;
+  text-decoration: underline;
 }
 
 .gigindexgenre{
