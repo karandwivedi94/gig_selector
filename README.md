@@ -24,6 +24,9 @@ Home Screen![Image of moon and home screen](/app/assets/images/Home_screen.png  
 
 ## Demo
 
+Events Page![Image of events and description](/app/assets/images/eventsPage.png   "Optional Title")
+
+
 ## Bugs
 - Heroku bugs - Casual users cannot view event page
 - All Promoters CSS broken
