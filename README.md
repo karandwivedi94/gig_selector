@@ -22,15 +22,13 @@ Home Screen![Image of moon and home screen](/app/assets/images/Home_screen.png  
 - Users can Edit and Delete Events
 - Users that do not log in can still view events and artists
 
+## Demo
+
 ## Bugs
 - Heroku bugs - Casual users cannot view event page
 - All Promoters CSS broken
 
 ## Code Improvements
-
-
-## Demo
-
 
 
 ## Feature Improvements
