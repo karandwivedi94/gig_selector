@@ -6,7 +6,6 @@ Gig Selector - Find Events/Gigs online
 - Ruby on Rails
 - HTML
 - CSS
-- 
 
 ## Gems Used
 - bcrypt
