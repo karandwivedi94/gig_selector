@@ -23,22 +23,20 @@ Home Screen![Image of moon and home screen](/app/assets/images/Home_screen.png  
 - Users that do not log in can still view events and artists
 
 ## Demo
-
 Events Page![Image of events and description](/app/assets/images/eventsPage.png   "Optional Title")
 
+## Heroku Link
+https://kd-gig-selector.herokuapp.com/
 
 ## Bugs
 - Heroku bugs - Casual users cannot view event page
-- All Promoters CSS broken
+- Heroku - All Promoters CSS broken
 
 ## Code Improvements
-
+- DRYer code for login authorisation
 
 ## Feature Improvements
 - Ability to add artists through Spotify API
 - Let artists create their own gigs
 - Add a Genre and Date model for easier search
-
-
-## Credits
 
